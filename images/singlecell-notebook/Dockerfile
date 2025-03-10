@@ -49,14 +49,17 @@ RUN mamba install --yes \
     'bioconductor-mast' \
     'bioconductor-scater' \
     'bioconductor-scran' \
-    'r-sceasy' \
+    'r-reticulate' \
     'r-seurat>=5.1.0' && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
 # packages not available for arm64 on conda 
-RUN pip install --no-cache-dir fastcluster
+RUN pip install --no-cache-dir cellbender fastcluster
+
+# install more R dependencies
+RUN R -e "devtools::install_github('cellgeni/sceasy', Ncpus = 4)"
 
 # import decoupler to combile numba
 RUN python -c "import decoupler"
