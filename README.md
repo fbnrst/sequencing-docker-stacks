@@ -3,7 +3,7 @@
 [![GitHub actions badge](https://github.com/fbnrst/sequencing-docker-stacks/actions/workflows/docker.yml/badge.svg)](https://github.com/fbnrst/sequencing-docker-stacks/actions/workflows/docker.yml?query=branch%3Amain "Docker images build status")
 
 
-Sequencing Docker Stacks are a set of ready-to-run [Docker images](https://quay.io/organization/fbnrst) containing sequencing data analysis tools. They are based on the [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks) and the [singularity single cell container](https://gitlab.hrz.tu-chemnitz.de/dcgc-bfx/singularity/singularity-single-cell).
+Sequencing Docker Stacks are a set of ready-to-run [Docker images](https://quay.io/organization/fbnrst) that contain sequencing data analysis tools. They are based on the [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks) and the [singularity single cell container](https://gitlab.hrz.tu-chemnitz.de/dcgc-bfx/singularity/singularity-single-cell).
 
 ## Available containers
 
@@ -16,18 +16,18 @@ Build manifests documenting the full software stack are available in the [wiki](
 
 ## Quick Start
 
-Make sure to try [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks) first.
+To get started, you might want to try [jupyter/docker-stacks](https://github.com/jupyter/docker-stacks) first.
 <!-- You can [try a relatively recent build of the quay.io/jupyter/base-notebook image on mybinder.org](https://mybinder.org/v2/gh/fbnrst/sequencing-docker-stacks/main?urlpath=lab/tree/README.ipynb). -->
 The examples below may help you get started if you [have Docker installed](https://docs.docker.com/get-started/get-docker/),
 know which Docker image you want to use, and want to launch a single Jupyter Application in a container.
 
 ### Example 
 
-This command pulls the `rnaseq-notebook` image tagged `latest` from Quay.io if it is not already present on the local host.
-It then starts a container running a Jupyter Server with the JupyterLab frontend and exposes the container's internal port `8888` to port `10000` of the host machine:
+This command pulls the `rnaseq-notebook` image tagged `latest` from Quay.io.
+It then starts a container running a Jupyter Server with the JupyterLab frontend and exposes the container's internal port `8888` to port `8888` of the host machine:
 
 ```bash
-docker run -it --rm  -p 10000:8888 -v "${PWD}":/home/jovyan/work quay.io/fbnrst/rnaseq-notebook:latest
+docker run -it --rm  -p 8888:8888 -v "${PWD}":/home/jovyan/work quay.io/fbnrst/rnaseq-notebook:latest
 ```
 
 ## CPU Architectures
