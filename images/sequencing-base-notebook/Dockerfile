@@ -38,13 +38,14 @@ RUN mamba install --yes \
     'session-info' \
     # R \
     'bioconductor-complexheatmap' \
-    'bioconductor-zellkonverter' \
     'r-base' \
+    'r-fastcluster' \
     'r-ggally' \
     'r-ggpubr' \
     'r-languageserver' \
     'r-pheatmap' \
     'r-plotly' \
+    'r-proxyc' \
     'r-viridis' \
     'r-writexl' \
     && \
