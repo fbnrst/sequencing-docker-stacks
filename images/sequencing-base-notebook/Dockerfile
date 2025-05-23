@@ -45,13 +45,14 @@ RUN mamba install --yes \
     'r-languageserver' \
     'r-pheatmap' \
     'r-plotly' \
-    'r-proxyc' \
     'r-viridis' \
     'r-writexl' \
     && \
     mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
+
+RUN R -e "install.packages("proxyC", Ncpus = 4)"
 
 USER root
 
