@@ -52,7 +52,7 @@ RUN mamba install --yes \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-RUN R -e "install.packages('proxyC', Ncpus = 4, repos = "https://cloud.r-project.org")"
+RUN R -e "install.packages('proxyC', Ncpus = 4, repos = 'https://cloud.r-project.org')"
 
 USER root
 
