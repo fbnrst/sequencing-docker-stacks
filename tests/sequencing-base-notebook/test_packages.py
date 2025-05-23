@@ -84,6 +84,7 @@ PACKAGE_MAPPING = {
     "mofa2": "MOFA2",
     "org.hs.eg.db": "org.Hs.eg.db",
     "org.mm.eg.db": "org.Mm.eg.db",
+    "paralleldist": "parallelDist",
     "randomforest": "randomForest",
     "rcurl": "RCurl",
     "reactomepa": "ReactomePA",

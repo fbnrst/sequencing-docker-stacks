@@ -43,6 +43,7 @@ RUN mamba install --yes \
     'r-ggally' \
     'r-ggpubr' \
     'r-languageserver' \
+    'r-paralleldist' \
     'r-pheatmap' \
     'r-plotly' \
     'r-viridis' \
