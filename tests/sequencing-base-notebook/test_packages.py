@@ -93,6 +93,7 @@ PACKAGE_MAPPING = {
     "rsqlite": "DBI",
     "seurat": "Seurat",
     "singlecellexperiment": "SingleCellExperiment",
+    "variancepartition": "variancePartition",
 }
 
 # List of packages that cannot be tested in a standard way

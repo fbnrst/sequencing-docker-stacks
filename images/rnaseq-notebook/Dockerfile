@@ -40,6 +40,7 @@ RUN mamba install --yes \
     'bioconductor-scuttle' \
     'bioconductor-tximeta' \
     'bioconductor-tximport' \
+    'bioconductor-variancepartition' \
     'bioconductor-vsn' \
     'r-ashr' \
     'r-base' \
