@@ -44,9 +44,6 @@ RUN pip --no-cache-dir install --upgrade \
     spatialdata \
     spatialdata-io \
     spatialdata-plot 
-    
-USER root
 
-RUN chmod -R a+w /opt/conda/
 
 USER ${NB_UID}

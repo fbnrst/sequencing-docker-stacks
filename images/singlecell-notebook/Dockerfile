@@ -85,8 +85,4 @@ RUN pip install --no-cache-dir --no-deps \
 
 RUN R -e "devtools::install_github('cellgeni/sceasy', threads = 4)"
 
-USER root
-
-RUN chmod -R a+w /opt/conda/
-
 USER ${NB_UID}

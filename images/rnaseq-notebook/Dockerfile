@@ -52,8 +52,4 @@ RUN mamba install --yes \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-USER root
-
-RUN chmod -R a+w /opt/conda/
-
 USER ${NB_UID}

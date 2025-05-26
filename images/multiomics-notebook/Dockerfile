@@ -35,8 +35,4 @@ RUN mamba install --yes \
 
 RUN R -e "BiocManager::install('MOFA2', ask = FALSE, Ncpus = 4)"
 
-USER root
-
-RUN chmod -R a+w /opt/conda/
-
 USER ${NB_UID}
