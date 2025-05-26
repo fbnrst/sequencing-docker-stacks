@@ -73,12 +73,6 @@ RUN mamba install --yes \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-USER root
-
-RUN chmod a+w /opt/conda/
-
-USER ${NB_UID}
-
 # packages not available for arm64 on conda 
 RUN pip install --no-cache-dir \
     fastcluster \
@@ -90,3 +84,9 @@ RUN pip install --no-cache-dir --no-deps \
     cellbender 
 
 RUN R -e "devtools::install_github('cellgeni/sceasy', threads = 4)"
+
+USER root
+
+RUN chmod -R a+w /opt/conda/
+
+USER ${NB_UID}

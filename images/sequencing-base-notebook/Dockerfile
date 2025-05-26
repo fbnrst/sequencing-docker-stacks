@@ -55,6 +55,6 @@ RUN mamba install --yes \
 
 USER root
 
-RUN chmod a+w /opt/conda/
+RUN chmod -R a+w /opt/conda/
 
 USER ${NB_UID}

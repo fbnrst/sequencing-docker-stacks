@@ -33,10 +33,10 @@ RUN mamba install --yes \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
+RUN R -e "BiocManager::install('MOFA2', ask = FALSE, Ncpus = 4)"
+
 USER root
 
-RUN chmod a+w /opt/conda/
+RUN chmod -R a+w /opt/conda/
 
 USER ${NB_UID}
-
-RUN R -e "BiocManager::install('MOFA2', ask = FALSE, Ncpus = 4)"
